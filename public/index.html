@@ -1,1 +1,150 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101019"><meta name="description" content="Unblockable. A small arcade. Pick a game and play."><title>Unblockable · Arcade</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script></head><body><header><a class="brand" href="./"><span class="brand-mark">u.</span>unblockable</a><span class="header-note">THE LITTLE INTERNET ARCADE</span><span class="edition">VOL. 001</span></header><main><div class="title-row"><div><p class="eyebrow">PICK UP. PLAY. REPEAT.</p><h1>One more round<span>.</span></h1></div><p class="intro">A few good games.<br>Absolutely no downloads.</p></div><div class="arcade"><nav class="library" aria-label="Choose a game"><div class="library-heading">THE LINEUP <span>03</span></div><button class="game-card active" data-game="2048" aria-pressed="true"><span class="card-art tile-art" aria-hidden="true">2048</span><span class="card-text"><strong>2048</strong><small>PUZZLE · THE CLASSIC</small></span><span class="card-index">01</span></button><button class="game-card" data-game="cookie" aria-pressed="false"><span class="card-art cookie-art" aria-hidden="true">🍪</span><span class="card-text"><strong>Cookie Foundry</strong><small>IDLE · ORIGINAL</small></span><span class="card-index">02</span></button><button class="game-card" data-game="snake" aria-pressed="false"><span class="card-art snake-art" aria-hidden="true">S</span><span class="card-text"><strong>Neon Snake</strong><small>ARCADE · ORIGINAL</small></span><span class="card-index">03</span></button><p class="library-note">No account. No ads.<br>Just you and your high score.</p></nav><section class="player" aria-label="Game player"><div class="player-bar"><span><b id="game-name">2048</b><small id="game-kind">PUZZLE</small></span><button id="fullscreen" aria-label="Fullscreen game">⛶ <span>Fullscreen</span></button></div><iframe id="game-frame" title="2048 game" src="games/2048/index.html" allow="fullscreen" loading="eager"></iframe><div class="player-footer"><span id="controls">Arrow keys / WASD / swipe to move</span><span>YOUR SAVE STAYS ON THIS DEVICE</span></div></section></div><footer><span>unblockable <span class="muted">/</span> made for the fun of it.</span><a href="credits.html">Game credits</a></footer></main></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0d0d12">
+  <meta name="description" content="Unblockable — a tiny arcade launcher for original browser games.">
+  <title>Unblockable · Arcade</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./" aria-label="Unblockable home"><span class="brand-mark">u.</span><span>unblockable</span></a>
+  <div class="header-note">THE LITTLE INTERNET ARCADE</div>
+  <div class="edition">REV. 002</div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">ORIGINALS ONLY</p>
+      <h1>One more round<span>.</span></h1>
+      <p class="subcopy">A clean launcher for real browser games. No fake clones pretending they invented cookies.</p>
+    </div>
+    <div class="hero-tools">
+      <label class="search">
+        <span>SEARCH</span>
+        <input id="game-search" autocomplete="off" placeholder="Find a game…" aria-label="Search games">
+      </label>
+      <button class="random-btn" id="random-game">↻ Random</button>
+    </div>
+  </section>
+
+  <div class="arcade">
+    <nav class="library" aria-label="Choose a game">
+      <div class="library-heading"><span>THE LINEUP</span><b id="visible-count">06</b></div>
+
+      <button class="game-card active" data-game="5812047309218" data-search="2048 puzzle classic gabriele cirulli" aria-pressed="true">
+        <span class="card-art tile-art">2048</span>
+        <span class="card-text"><strong>2048</strong><small>PUZZLE · LOCAL ORIGINAL ENGINE</small></span>
+        <span class="card-index">01</span>
+      </button>
+
+      <button class="game-card" data-game="9482715603327" data-search="cookie clicker idle orteil dashnet" aria-pressed="false">
+        <span class="card-art cookie-art">🍪</span>
+        <span class="card-text"><strong>Cookie Clicker</strong><small>IDLE · OFFICIAL SITE</small></span>
+        <span class="card-index">02</span>
+      </button>
+
+      <button class="game-card" data-game="7259031846612" data-search="slither io snake multiplayer" aria-pressed="false">
+        <span class="card-art slither-art">S</span>
+        <span class="card-text"><strong>Slither.io</strong><small>MULTIPLAYER · OFFICIAL SITE</small></span>
+        <span class="card-index">03</span>
+      </button>
+
+      <button class="game-card" data-game="5116842209374" data-search="zombs royale io battle royale multiplayer" aria-pressed="false">
+        <span class="card-art zombs-art">Z</span>
+        <span class="card-text"><strong>Zombs Royale</strong><small>BATTLE ROYALE · OFFICIAL SITE</small></span>
+        <span class="card-index">04</span>
+      </button>
+
+      <button class="game-card" data-game="8824156073139" data-search="hextris puzzle tetris hexagon original open source" aria-pressed="false">
+        <span class="card-art hex-art">⬡</span>
+        <span class="card-text"><strong>Hextris</strong><small>PUZZLE · ORIGINAL OPEN SOURCE</small></span>
+        <span class="card-index">05</span>
+      </button>
+
+      <button class="game-card" data-game="3468201975541" data-search="agar io multiplayer cells official" aria-pressed="false">
+        <span class="card-art agar-art">●</span>
+        <span class="card-text"><strong>Agar.io</strong><small>MULTIPLAYER · OFFICIAL SITE</small></span>
+        <span class="card-index">06</span>
+      </button>
+
+      <p class="library-note">External originals stay on their publishers' servers. Loading one may use that publisher's cookies or services.</p>
+    </nav>
+
+    <section class="player" id="player" aria-label="Game player">
+      <div class="player-bar">
+        <div>
+          <b id="game-name">2048</b>
+          <small id="game-kind">PUZZLE</small>
+        </div>
+        <div class="player-actions">
+          <a id="open-original" class="bar-link" target="_blank" rel="noopener noreferrer" hidden>Original ↗</a>
+          <button id="fullscreen" aria-label="Fullscreen game">⛶ <span>Fullscreen</span></button>
+        </div>
+      </div>
+
+      <div class="frame-shell">
+        <iframe id="game-frame" title="2048 game" src="games/2048/index.html" allow="fullscreen; autoplay; gamepad" loading="eager"></iframe>
+        <div class="external-gate" id="external-gate" hidden>
+          <span class="source-pill">ORIGINAL PUBLISHER SITE</span>
+          <h2 id="gate-title">Load original game</h2>
+          <p id="gate-copy">This game is hosted by its publisher. Loading it connects your browser directly to that site.</p>
+          <div class="gate-actions">
+            <button id="load-external">Load original</button>
+            <a id="gate-original" target="_blank" rel="noopener noreferrer">Open official site ↗</a>
+          </div>
+          <small>If the publisher blocks embedding, use “Open official site.” Browser games love making simple things weird.</small>
+        </div>
+      </div>
+
+      <div class="player-footer">
+        <span id="controls">Arrow keys / WASD / swipe to move</span>
+        <span id="source-status">LOCAL · MIT-LICENSED ENGINE</span>
+      </div>
+    </section>
+  </div>
+
+  <section class="about-strip">
+    <div><span>06</span><small>GAMES</small></div>
+    <div><span>00</span><small>ADS FROM US</small></div>
+    <div><span>01</span><small>LOCAL BUILD</small></div>
+    <p>Unblockable is an independent launcher. Third-party games, names and trademarks belong to their respective owners.</p>
+  </section>
+
+  <footer>
+    <span>unblockable <span class="muted">/</span> made for the fun of it.</span>
+    <nav class="footer-links" aria-label="Legal">
+      <a href="credits.html">Credits</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="cookies.html">Cookies</a>
+    </nav>
+  </footer>
+</main>
+
+<button id="admin-peek" class="admin-peek" aria-label="Open admin utilities" title="revision utilities">·</button>
+
+<aside id="admin-panel" class="admin-panel" hidden aria-label="Admin utilities">
+  <div class="admin-head">
+    <div><small>PRIVATE UTILITY</small><strong>Admin deck</strong></div>
+    <button id="admin-close" aria-label="Close admin panel">×</button>
+  </div>
+  <p>This is a static-site utility panel, not authentication. Nothing secret is stored here.</p>
+  <label>
+    GAME
+    <select id="admin-game"></select>
+  </label>
+  <div class="admin-grid">
+    <button id="admin-jump">Open route</button>
+    <button id="admin-official">Open original</button>
+    <button id="admin-copy">Copy route</button>
+    <a class="admin-button" href="revision.html">Frontend revision</a>
+  </div>
+  <code id="admin-route"></code>
+</aside>
+</body>
+</html>
