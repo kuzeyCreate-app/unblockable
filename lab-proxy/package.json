@@ -1,0 +1,12 @@
+{
+  "name": "unblockable-local-proxy-lab",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local-only reverse proxy lab for studying HTTP proxy behavior.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
