@@ -38,3 +38,5 @@ Vercel can also serve the same `public/` directory using `vercel.json`.
 ## 2048 provenance
 
 The upstream 2048 engine is by Gabriele Cirulli and retains its MIT License in `public/games/2048/LICENSE.txt`.
+
+Deployment trigger: 2026-09-30
