@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Frontend Revision · Unblockable</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="topbar"><a class="brand" href="./"><span class="brand-mark">u.</span><span>unblockable</span></a><span class="edition">FRONTEND REVISION</span></header>
+<main class="revision-main">
+<p class="eyebrow">REVISION LAB · 002</p><h1>Frontend revision.</h1>
+<p class="subcopy">Preview the live frontend at desktop, tablet, or mobile width without touching the actual game state.</p>
+<div class="revision-meta">
+<div><small>BUILD</small><strong>REV. 002</strong></div>
+<div><small>GAMES</small><strong>6 originals</strong></div>
+<div><small>ROUTES</small><strong>numeric IDs</strong></div>
+</div>
+<div class="revision-toolbar">
+<button data-w="100%">Desktop</button><button data-w="900px">Tablet</button><button data-w="390px">Mobile</button>
+<a href="./" target="_blank">Open live ↗</a>
+</div>
+<div class="revision-stage"><iframe id="preview" src="./" title="Unblockable frontend preview"></iframe></div>
+<footer><a href="./">← Back to arcade</a></footer>
+</main>
+<script>document.querySelectorAll('[data-w]').forEach(b=>b.onclick=()=>document.getElementById('preview').style.width=b.dataset.w)</script>
+</body></html>
