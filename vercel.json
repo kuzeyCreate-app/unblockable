@@ -1,1 +1,13 @@
-{"outputDirectory":"public","headers":[{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"same-origin"},{"key":"Content-Security-Policy","value":"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'"}]}]}
+{
+  "outputDirectory":"public",
+  "headers":[
+    {
+      "source":"/(.*)",
+      "headers":[
+        {"key":"X-Content-Type-Options","value":"nosniff"},
+        {"key":"Referrer-Policy","value":"same-origin"},
+        {"key":"Content-Security-Policy","value":"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; frame-src 'self' https://orteil.dashnet.org https://slither.io https://zombsroyale.io https://hextris.github.io https://agar.io; object-src 'none'; base-uri 'self'; form-action 'self'"}
+      ]
+    }
+  ]
+}
